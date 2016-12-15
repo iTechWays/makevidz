@@ -31,6 +31,7 @@ if ($proceed == true)
     $registerObj->setEmail($_POST['email']);
     $registerObj->setPassword($_POST['password']);
     $registerObj->setGender($_POST['gender']);
+	$registerObj->setAbout($_POST['bloodgroup']);
     $registerObj->setBirthday($_POST['birthday']);
     $registerObj->setLocation($_POST['location']);
     $registerObj->setHometown($_POST['hometown']);

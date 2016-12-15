@@ -2187,7 +2187,7 @@ function getSearch($searchQuery='', $fromRow=0, $limit=10)
     }
     
     $query = $conn->query("SELECT id FROM " . DB_ACCOUNTS . "
-        WHERE name LIKE _utf8'%$searchQuery%' collate utf8_general_ci
+        WHERE name LIKE _utf8'%$searchQuery%' or about LIKE _utf8'%$searchQuery%' collate utf8_general_ci
         AND (id IN (SELECT id FROM " . DB_USERS . ") OR id IN (SELECT id FROM " . DB_PAGES . ") OR id IN (SELECT id FROM " . DB_GROUPS . " WHERE group_privacy IN ('open','closed')))
         AND type IN ('user','page','group') AND active=1
         ORDER BY name ASC

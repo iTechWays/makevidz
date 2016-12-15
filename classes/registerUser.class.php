@@ -12,12 +12,14 @@ class registerUser {
     private $email;
     private $password;
     private $gender;
+	private $bloodgroup;
     private $birthday = '1-1-1990';
     private $location = '';
     private $hometown = '';
     private $about = '';
 
     private $allowedGenders = array('male', 'female');
+	private $allowedbloodgroups = array('A+','A-','B+','B-','O+','O-','AB+','AB-');
 
     function __construct()
     {
@@ -42,7 +44,7 @@ class registerUser {
     {
         if (! empty ($this->name) && ! empty ($this->username) && ! empty ($this->email) && ! empty ($this->password) && ! empty ($this->gender))
         {
-            $query = $this->getConnection()->query("INSERT INTO " . DB_ACCOUNTS . " (active,about,cover_id,email,email_verification_key,name,password,time,type,username) VALUES (1,'" . $this->about . "',0,'" . $this->email . "','" . md5(generateKey()) . "','" . $this->name . "','" . $this->password . "'," . time() . ",'user','" . $this->username . "')");
+            $query = $this->getConnection()->query("INSERT INTO " . DB_ACCOUNTS . " (active,about,cover_id,email,email_verification_key,name,password,time,type,username,bloodgroup) VALUES (1,'" . $this->about . "',0,'" . $this->email . "','" . md5(generateKey()) . "','" . $this->name . "','" . $this->password . "'," . time() . ",'user','" . $this->username . "','" . $this->bloodgroup . "')");
 
             if ($query)
             {
@@ -105,6 +107,14 @@ class registerUser {
         if (in_array($g, $this->allowedGenders))
         {
             $this->gender = $g;
+        }
+    }
+	
+	public function setbloodgroup($z)
+    {
+        if (in_array($z, $this->allowedbloodgroup))
+        {
+            $this->bloodgroup = $z;
         }
     }
 
