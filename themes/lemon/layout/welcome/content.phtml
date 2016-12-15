@@ -1,0 +1,125 @@
+<div class="page-margin"></div>
+<div align="center" class="welcome-form-div">
+    <div class="welcome-form">
+        <div class="html-logo">
+            <i class="icon-comments-alt"></i> {{CONFIG_SITE_NAME}}
+        </div>
+
+        <div class="form-header">
+            <div class="float-left">
+                <a class="login-tab active-tab form-tab" onclick="javascript:welcome_form_changetab(this,'login-form');" href="#">@log_in@</a>
+                <a class="signup-tab form-tab" onclick="javascript:welcome_form_changetab(this,'signup-form');" href="#">@sign_up_label@</a>
+                <a class="reset-password-tab form-tab" onclick="javascript:welcome_form_changetab(this,'forgotpass-form');" href="#">@forgot_password@</a>
+            </div>
+
+            <div class="float-right"></div>
+
+            <div class="float-clear"></div>
+        </div>
+
+        <form class="login-form" method="post">
+            <div class="form-content">
+                <div class="input-wrapper">
+                    <input type="text" name="login_id" value="@login_id_label@" placeholder="@login_id_label@" data-placeholder="@login_id_label@" autocomplete="off">
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="password" name="login_password" placeholder="Password" autocomplete="off">
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="checkbox" name="keep_logged_in" value="1"> @keep_me_logged_in@ | <a href="{{TOS_PAGE_URL}}" data-href="?tab1=terms&tab2=tos">@terms_tos_label@</a>
+                </div>
+                
+                <button class="submit-btn active"><i class="icon-signin progress-icon"></i> @log_in@</button>
+            </div>
+        </form>
+
+        <form class="signup-form" method="post">
+            <div class="form-content">
+                <div class="input-wrapper">
+                    <input type="text" name="name" placeholder="@fullname_label@" autocomplete="off">
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="text" name="username" placeholder="@username_label@" onkeyup="SK_checkUsername(this.value,0,'.check-username-result',false);" autocomplete="off">
+                    <div class="check-username-result"></div>
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="password" name="password" placeholder="@password_label@" autocomplete="off">
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="text" name="email" placeholder="@email_label@" autocomplete="off">
+                </div>
+                
+                <div class="input-wrapper">
+                    <select name="gender">
+                        <option value="">
+                            @gender_label@
+                        </option>
+                        <option value="male">
+                            @gender_male_label@
+                        </option>
+                        <option value="female">
+                            @gender_female_label@
+                        </option>
+                    </select>
+                </div>
+
+                {{SIGNUP_BIRTHDAY_INPUT}}
+
+                {{SIGNUP_LOCATION_INPUT}}
+
+                {{SIGNUP_HOMETOWN_INPUT}}
+
+                {{SIGNUP_ABOUT_INPUT}}
+                
+                {{SIGNUP_CAPTCHA_INPUT}}
+
+                <div class="input-wrapper">
+                    <a href="{{TOS_PAGE_URL}}" data-href="?tab1=terms&tab2=tos">@terms_tos_label@</a> | <a href="{{PRIVACY_PAGE_URL}}" data-href="?tab1=terms&tab2=privacy">@terms_privacy_label@</a>
+                </div>
+                
+                <button class="submit-btn active"><i class="icon-angle-right progress-icon"></i> @sign_up_label@</button>
+            </div>
+        </form>
+
+        <form class="forgotpass-form" method="post">
+            <div class="form-content">
+                <div class="input-wrapper">
+                    <input type="text" name="forgotpass_id" value="@login_id_label@" placeholder="@login_id_label@" data-placeholder="@login_id_label@" autocomplete="off">
+                </div>
+                
+                <button class="submit-btn active">
+                    <i class="icon-inbox progress-icon"></i> @reset_password_reset@
+                </button>
+            </div>
+        </form>
+
+        <div class="hr"></div>
+
+        <div class="fb-button">
+            <a href="{{FACEBOOK_LOGIN_URL}}">
+                <i class="icon-facebook"></i>
+                <span>@connect_with_fb@</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--{{TAB_CONTENT}}-->
+
+<div class="float-clear"></div>
+<script>
+function welcome_form_changetab(tab,formClass)
+{
+    $('.welcome-form').find('.form-header').find('.form-tab').removeClass('active-tab');
+    $(tab).addClass('active-tab');
+
+    $('.welcome-form')
+        .find('form').hide()
+    .end()
+        .find('form.' + formClass).show();
+}
+</script>
