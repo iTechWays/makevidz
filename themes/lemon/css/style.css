@@ -1234,7 +1234,8 @@ span.window-close-btn {
 
 .story-wrapper .options-wrapper {
     color: #898f9c;
-    margin: 10px 10px 0
+    margin: 10px 10px 0;
+	height:30px;
 }
 
 .story-wrapper .opt {

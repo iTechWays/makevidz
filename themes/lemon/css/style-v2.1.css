@@ -183,6 +183,7 @@ span.reaction-close-btn {
     opacity: 0;
     -webkit-transition: all 500ms ease-in-out 300ms;
     transition: all 500ms ease-in-out 300ms;
+	display:none;
 }
 .story-react-wrapper img
 {
