@@ -181,7 +181,7 @@ textarea:disabled {
     right: 0;
     left: 0;
     height: 44px;
-    background: linear-gradient(#29a8b7, #1e98a7);
+    background: linear-gradient(#1e98a7, #29a8b7);
     color: #fff;
     border-bottom: 1px solid #1e98a7
 }
