@@ -152,7 +152,7 @@ span.reaction-close-btn {
 }
 .story-react-container .opt-active, .story-react-container .opt:hover
 {
-    color: #5890ff;
+    color: #3B5998;
 }
 .yellow-opt
 {
@@ -233,6 +233,7 @@ span.reaction-close-btn {
 .header-live-search input
 {
     height: 27px !important;
+	width: 500px;
 }
 .lb-container {
     background: #e9eaeb;

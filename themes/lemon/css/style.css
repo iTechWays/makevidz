@@ -33,7 +33,7 @@ body {
 }
 
 a {
-    color: #1e98a7;
+    color: #3B5998;
     text-decoration: none;
     cursor: pointer
 }
@@ -104,10 +104,10 @@ input[type=submit] {
 button.active,
 input[type=button].active,
 input[type=submit].active {
-    background: #29a8b7;
-    background: linear-gradient(#29a8b7, #1e98a7);
+    background: #3B5998;
+    background: linear-gradient(#3B5998, #3B5998);
     color: #fff;
-    border-color: #1e98a7
+    border-color: #3B5998
 }
 
 button:disabled,
@@ -181,9 +181,9 @@ textarea:disabled {
     right: 0;
     left: 0;
     height: 44px;
-    background: linear-gradient(#1e98a7, #29a8b7);
+    background: linear-gradient(#3B5998, #3B5998);
     color: #fff;
-    border-bottom: 1px solid #1e98a7
+    border-bottom: 1px solid #3B5998
 }
 
 .header-wrapper a {
@@ -223,7 +223,7 @@ textarea:disabled {
 }
 
 .header-user-info {
-    background: #1e98a7;
+    background: #3B5998;
     padding: 0 10px;
     margin-left: 2px
 }
@@ -990,7 +990,7 @@ span.window-close-btn {
     color: #444;
     font-weight: 500;
     padding: 10px;
-    border-bottom: 3px solid #29a8b7;
+    border-bottom: 3px solid #3B5998;
     border-radius: 3px 3px 0 0
 }
 
@@ -1029,7 +1029,7 @@ span.window-close-btn {
     color: #444;
     font-weight: 500;
     padding: 10px;
-    border-bottom: 3px solid #29a8b7;
+    border-bottom: 3px solid #3B5998;
     border-radius: 3px 3px 0 0
 }
 
@@ -1246,7 +1246,7 @@ span.window-close-btn {
 }
 
 .story-wrapper .opt-active {
-    color: #1e98a7;
+    color: #3B5998;
     cursor: pointer
 }
 
@@ -1879,7 +1879,7 @@ span.window-close-btn {
     color: #444;
     font-weight: 500;
     padding: 10px;
-    border-bottom: 3px solid #29a8b7;
+    border-bottom: 3px solid #3B5998;
     border-radius: 3px 3px 0 0
 }
 
@@ -1918,7 +1918,7 @@ span.window-close-btn {
     color: #444;
     font-weight: 500;
     padding: 10px;
-    border-bottom: 3px solid #29a8b7;
+    border-bottom: 3px solid #3B5998;
     border-radius: 3px 3px 0 0
 }
 

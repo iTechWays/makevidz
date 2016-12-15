@@ -4,7 +4,7 @@ function youtube_search_upload_option()
 	global $lang;
 	
 	return '<div class="input-wrapper youtube-search-wrapper" data-group="A">
-	    <i class="icon-film icon"></i>
+	    <i class="fa fa-youtube"></i>
 
 	    <input class="youtube-input" type="text" onkeyup="searchYoutube(this.value);" value="' . $lang['post_publisher_youtube_placeholder'] . '" placeholder="' . $lang['post_publisher_youtube_placeholder'] . '" data-placeholder="' . $lang['post_publisher_youtube_placeholder'] . '">
 	    
